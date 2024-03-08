@@ -1,1 +1,1 @@
-##Interactive Fiction game made in Twine
+# Interactive Fiction game made in Twine
