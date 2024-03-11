@@ -19,3 +19,5 @@
 - [] Add more images throughout story
     - [x] Check to see if negative images look better
         - Confirmed that it does indeed look worse
+- [] Make Koi move in wave form
+- [] Make a group of Koi on screen during bath scene
