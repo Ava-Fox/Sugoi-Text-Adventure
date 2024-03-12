@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Sugoi.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Sugoi" startnode="21" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="B3C70D10-9DD4-4826-AD66-3E02072E69EB" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
+<tw-storydata name="Sugoi" startnode="21" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="B3C70D10-9DD4-4826-AD66-3E02072E69EB" options="" tags="" zoom="0.3" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
   background-color: rgb(221, 198, 223) !important;
   color: black;
 }
@@ -19,8 +19,22 @@ tw-dialog {
   color: black;
 }
 
+tw-dialog input[type=text]{
+  padding: 0.4em;
+  color: #E8BA36;
+}
+
 img {
   border: 3px solid black;
+}
+
+#aa {
+  border: none;
+  width: 50%; 
+  height: auto; 
+  text-align: right;
+  position: fixed;
+  margin-right: 10px;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Practice" color="purple"></tw-tag><tw-passagedata pid="1" name="yes!!" tags="" position="1200,200" size="100,100">{
 (set: $andypoints to 0)
 (set: $averypoints to 0)
@@ -53,11 +67,11 @@ If you were a pirate you would certainly be shivering your timbers, because as y
 Will you...
 [[introduce yourself]] or [[be introduced]]</tw-passagedata><tw-passagedata pid="3" name="stay at school" tags="" position="1400,200" size="100,100">You realize you&#39;re too much of a loser to be cool and you drop all of your stuff in your rush to escape, embarrassing yourself thoroughly.
 
-&#39;&#39;The End, dummy.&#39;&#39;</tw-passagedata><tw-passagedata pid="4" name="gabrielle" tags="" position="2825,850" size="100,100">(set: $originalSuiter to &quot;gabrielle&quot;)
+&#39;&#39;The End, dummy.&#39;&#39;</tw-passagedata><tw-passagedata pid="4" name="gabrielle" tags="" position="3375,0" size="100,100">(set: $originalSuiter to &quot;gabrielle&quot;)
 After practice, Gabrielle approaches you.
 (text-color: #EF22BA)[&quot;When you told me I was pretty&quot;], she says (text-color: #EF22BA)[&quot;I felt that. It really resonated, you know. I was wondering if you wanted to go to the mall next Saturday with me to pick out my next greatest outfit?&quot;]
 
-[[go with Gabrielle]] or [[check my other options]]</tw-passagedata><tw-passagedata pid="5" name="Griffin" tags="" position="3625,850" size="100,100">(set: $originalSuiter to &quot;griffin&quot;)
+[[go with Gabrielle]] or [[check my other options]]</tw-passagedata><tw-passagedata pid="5" name="Griffin" tags="" position="4175,0" size="100,100">(set: $originalSuiter to &quot;griffin&quot;)
 After practice, Griffin approaches you.
 (if: $windrumbattle)[ 
 (if: $middlefinger)[(text-color:#117A65)[&quot;You were very impressive back there&quot;], he says, and now, smiling (text-color:#117A65)[&quot;And you&#39;ve got style, I&#39;m into that. Andy can be a bit of a twat, he&#39;s too full of himself, and needs to be taken down a notch or two sometimes. Anyways, there&#39;s actually gonna be a really cool local show this Saturday, I was wondering if you wanted to come with me?&quot;]]]
@@ -66,7 +80,7 @@ After practice, Griffin approaches you.
 ]
 
 
-[[go with Griffin]] or [[check my other options]]</tw-passagedata><tw-passagedata pid="6" name="andy" tags="" position="2375,975" size="100,100">(set: $originalSuiter to &quot;andy&quot;)
+[[go with Griffin]] or [[check my other options]]</tw-passagedata><tw-passagedata pid="6" name="andy" tags="" position="2925,125" size="100,100">(set: $originalSuiter to &quot;andy&quot;)
 After practice, Andy approaches you.
 {
 (if: $instrument is &quot;drums&quot;)[
@@ -90,13 +104,13 @@ After practice, Andy approaches you.
 (else:)[
 (text-color:red)[&quot;You really know your stuff&quot;], he says. (text-color:red)[&quot;Your $instrument playing is incredible. So... I was wondering if you wanted to come with me to an all-inclusive hot springs retreat?&quot;]
 ]
-[[go with Andy]] or [[check my other options]]</tw-passagedata><tw-passagedata pid="7" name="avery" tags="" position="3100,1100" size="100,100">(set: $originalSuiter to &quot;avery&quot;)
+[[go with Andy]] or [[check my other options]]</tw-passagedata><tw-passagedata pid="7" name="avery" tags="" position="3750,250" size="100,100">(set: $originalSuiter to &quot;avery&quot;)
 After practice, Avery approaches you.
 (text-color: #1B4F72)[&quot;I had a really good time swimming with you&quot;] he begins, then asks (text-color: #1B4F72)[&quot;You seem pretty sporty, if you&#39;re interested I would love to show you my training arena in the mountains sometime?&quot;]
 
-[[go with Avery]] or [[check my other options]]</tw-passagedata><tw-passagedata pid="8" name="stay back" tags="" position="3625,1225" size="100,100">
-[[bump into Andy and Avery]]</tw-passagedata><tw-passagedata pid="9" name="follow" tags="" position="3925,1025" size="100,100">[[break free]] [[accomplice]]</tw-passagedata><tw-passagedata pid="10" name="bump into Andy and Avery" tags="" position="3675,1550" size="100,100">[[gabrielle]] </tw-passagedata><tw-passagedata pid="11" name="break free" tags="" position="3825,1225" size="100,100">
-[[bump into Andy and Avery]] </tw-passagedata><tw-passagedata pid="12" name="accomplice" tags="" position="4025,1225" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="introduce yourself" tags="" position="1000,525" size="100,100">You tell everyone what your name is. When you’re finished, (text-color:#117A65)[Griffin] includes, 
+[[go with Avery]] or [[check my other options]]</tw-passagedata><tw-passagedata pid="8" name="stay back" tags="" position="5075,250" size="100,100">
+[[bump into Andy and Avery]]</tw-passagedata><tw-passagedata pid="9" name="follow" tags="" position="5300,75" size="100,100">[[break free]] [[accomplice]]</tw-passagedata><tw-passagedata pid="10" name="bump into Andy and Avery" tags="" position="5125,575" size="100,100">[[gabrielle]] </tw-passagedata><tw-passagedata pid="11" name="break free" tags="" position="5275,250" size="100,100">
+[[bump into Andy and Avery]] </tw-passagedata><tw-passagedata pid="12" name="accomplice" tags="" position="5475,250" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="introduce yourself" tags="" position="1000,525" size="100,100">You tell everyone what your name is. When you’re finished, (text-color:#117A65)[Griffin] includes, 
 (text-color:#117A65 )[“I told $name she could come to practice today, heard her in the practice rooms - she&#39;s pretty good.”]
 Just then, a pair of finely manicured hands flash into your vision, and then you see who they belong to.  
 
@@ -166,10 +180,9 @@ Ok, now you really should say something.
 {
 (if: $notlookatchair)[3. Nevermind saying something, look at who&#39;s lounging in the [[chair]]]
 (else:)[3. &quot;Hi guys, [[Gabrielle you&#39;re so pretty]]]
-}</tw-passagedata><tw-passagedata pid="21" name="Start" tags="" position="1200,50" size="100,100">&lt;audio controls&gt;
-  &lt;source src=&quot;sounds/universal.mp3&quot;&gt;
-&lt;/audio&gt;
-&lt;img src=&quot;images/aa.png&quot; alt=&quot;two hot guys beckoning you towards a musical adventure&quot; style=&quot;height: 50%; width: 50%; text-align: right;&quot;&gt;
+}</tw-passagedata><tw-passagedata pid="21" name="Start" tags="" position="1200,50" size="100,100">&lt;audio src=&quot;sounds/universal.mp3&quot; controls&gt;&lt;/audio&gt;
+
+&lt;img id=&quot;aa&quot; src=&quot;/Users/avafox/development/Sugoi_Txt_Adv/images/aa.png&quot; alt=&quot;two hot guys beckoning you towards a musical adventure&quot; style=&quot;&quot;&gt;
 
 (text-style:&quot;outline&quot;)[Hey, girl! Are you ready to go on a musical adventure??
 ]
@@ -182,7 +195,6 @@ Instead, (text-color: #1B4F72)[“Oh, thanks! I work out.”]
 (set: $nipples to true)
 Huh? Maybe you really will get out of this [[jam]] session alive.
 </tw-passagedata><tw-passagedata pid="23" name="jam" tags="" position="1050,1500" size="100,100">(if:$gabriellepretty)[(display: &quot;how today goes.&quot;)]
-
 (else:)[
 (if:$nipples)[(text-color:#117A65)[&quot;Well,&quot;] Says (text-color:#117A65)[Griffin] (text-color:#117A65)[&quot;Don&#39;t you think it&#39;s time to jam? Come along, $name, I&#39;m excited to see your epic $instrument skills&quot;]]
 (text-colour:#EF22BA)[“Oh, we&#39;re all jamming? I thought she was just here to watch.”]
@@ -344,7 +356,7 @@ You gain epic respect as your sticks fly across the set. You produce some pretty
 (else:)[
 It begins well. Your sticks fly across the set in rapid motion, and you produce some pretty epic noises. However, as you reach the climax of the solo, you get the sickening feeling that something is very, very wrong. Suddenly, the world blurs and things are flying everywhere. After a jolt, you realize the loosely-put-together drumset //fell apart right under you//. Now on your back, half covered by scattered drum peices, you notice Andy [[smirking from beneath a hand]].
 ]</tw-passagedata><tw-passagedata pid="48" name="count in" tags="" position="825,2450" size="100,100">You give a count off : &quot;ONE TWO THREE FOUR&quot;, and now you&#39;re [[jamming]] - the room now exploded with noise. </tw-passagedata><tw-passagedata pid="49" name="let Andy lead" tags="" position="950,2450" size="100,100">(set: $andypoints to it + 1)
-At that, Andy gives a count off: (text-color:red)[&quot;ONE, TWO, THREE, FOUR&quot;]], and now you&#39;re [[jamming]] - the room now exploded with noise. </tw-passagedata><tw-passagedata pid="50" name="jamming" tags="" position="1000,2700" size="100,100">It&#39;s delicious, the music you&#39;re all now making. If you were, say, a novice writer - you would describe it as very, very good. You knew you were in a room full of experts, but you hadn&#39;t realized you&#39;d be sharing a conversation with musicians of this caliber. 
+At that, Andy gives a count off: (text-color:red)[&quot;ONE, TWO, THREE, FOUR&quot;]], and now you&#39;re [[jamming]] - the room now exploded with noise. </tw-passagedata><tw-passagedata pid="50" name="jamming" tags="" position="975,2625" size="100,100">It&#39;s delicious, the music you&#39;re all now making. If you were, say, a novice writer - you would describe it as very, very good. You knew you were in a room full of experts, but you hadn&#39;t realized you&#39;d be sharing a conversation with musicians of this caliber. 
 {
 (if: $instrument is &quot;drums&quot; and not $helped)[Suddenly, you get the sickening feeling that something is wrong. The world blurs and things are flying everywhere. After a jolt, you realize the loosely-put-together drumset //fell apart right under you//. Everybody stops playing and stares at you. Now on your back, half covered by scattered drum peices, you notice Andy [[smirking from beneath a hand]]]
 }
@@ -467,7 +479,7 @@ Griffin sticks his tounge out at you playfully and continues to play sick ass ri
 (set: $andypoints to it - 1)}
 Andy narrows his eyes but does nothing. 
 
-(display: &quot;Griffin&quot;)</tw-passagedata><tw-passagedata pid="78" name="go with Andy" tags="" position="2100,1200" size="100,100">&lt;!--
+(display: &quot;Griffin&quot;)</tw-passagedata><tw-passagedata pid="78" name="go with Andy" tags="" position="2650,350" size="100,100">&lt;!--
 Hot springs playboy date 
 	- eyes for another girl
     - slightly mention that gabs and grif dating?
@@ -480,7 +492,7 @@ The first thing you notice is the steam, then the scenery. Dappled green and red
 
 Jeez, [[I don&#39;t remember this guy talking so much?]]
 
-It&#39;s O.K., he&#39;s cute. [[Let him keep going]].</tw-passagedata><tw-passagedata pid="79" name="check my other options" tags="" position="2375,1200" size="100,100">&lt;!--Checking to see who they were interested in first--&gt;
+It&#39;s O.K., he&#39;s cute. [[Let him keep going]].</tw-passagedata><tw-passagedata pid="79" name="check my other options" tags="" position="2925,350" size="100,100">&lt;!--Checking to see who they were interested in first--&gt;
 {
 (if: $averypoints &gt; 0 and &quot;avery&quot; is not $originalSuiter)[
 You can see Avery standing awkwardly to the side, obviously waiting for your attention.
@@ -508,50 +520,59 @@ You can see Andy casually leaning against a wall, lighting a cigarrette. You can
 Griffin stretches obviously and obnoxiously, clearly trying to get your attention. 
 [[give Griffin your attention]]
 ]
-}</tw-passagedata><tw-passagedata pid="80" name="give Avery your attention" tags="" position="2325,1350" size="100,100">&quot;Hi $name&quot; he says, after you give him a glance. &quot;I really enjoyed swimming with you. You seem like a sporty person. Would you be interested in coming to my training area in the mountains sometime?&quot;
+}</tw-passagedata><tw-passagedata pid="80" name="give Avery your attention" tags="" position="2875,500" size="100,100">&quot;Hi $name&quot; he says, after you give him a glance. &quot;I really enjoyed swimming with you. You seem like a sporty person. Would you be interested in coming to my training area in the mountains sometime?&quot;
 
-[[go with Avery]] or [[check my other options]] again</tw-passagedata><tw-passagedata pid="81" name="walk up to Andy" tags="" position="2625,1325" size="100,100">Andy takes a drag from his cigarrette, and regards you with a calculating look. Exhaling, he presents it to you - wordlessly offering you a smoke.
-[[Smoke with Andy]] or [[Deny graciously]]</tw-passagedata><tw-passagedata pid="82" name="Accept Gabrielle&#39;s offer" tags="" position="2475,1425" size="100,100">(display: &quot;go with Gabrielle&quot;)</tw-passagedata><tw-passagedata pid="83" name="give Griffin your attention" tags="" position="2525,1600" size="100,100">(text-color:#117A65)[&quot;$name!&quot;], he says, continuing to stretch (text-color:#117A65)[&quot;You really rocked back there, you can really play! Hey, so there&#39;s gonna be this really great local show this weekend... wanna come?&quot;]
+[[go with Avery]] or [[check my other options]] again</tw-passagedata><tw-passagedata pid="81" name="walk up to Andy" tags="" position="3175,475" size="100,100">Andy takes a drag from his cigarrette, and regards you with a calculating look. Exhaling, he presents it to you - wordlessly offering you a smoke.
+[[Smoke with Andy]] or [[Deny graciously]]</tw-passagedata><tw-passagedata pid="82" name="Accept Gabrielle&#39;s offer" tags="" position="3025,575" size="100,100">(display: &quot;go with Gabrielle&quot;)</tw-passagedata><tw-passagedata pid="83" name="give Griffin your attention" tags="" position="3075,750" size="100,100">(text-color:#117A65)[&quot;$name!&quot;], he says, continuing to stretch (text-color:#117A65)[&quot;You really rocked back there, you can really play! Hey, so there&#39;s gonna be this really great local show this weekend... wanna come?&quot;]
 
-[[go with Griffin]] or [[check my other options]] again</tw-passagedata><tw-passagedata pid="84" name="go with Gabrielle" tags="" position="2800,1200" size="100,100">(text-color: orange)[You find yourself going on a Mall Date with Gabrielle, the coolest singer-guitarist in school.]</tw-passagedata><tw-passagedata pid="85" name="go with Avery" tags="" position="3200,1275" size="100,100">(text-color: orange)[You find yourself going on a Mountaineering Date with Avery, the coolest bassist in school.]
+[[go with Griffin]] or [[check my other options]] again</tw-passagedata><tw-passagedata pid="84" name="go with Gabrielle" tags="" position="3350,350" size="100,100">(text-color: orange)[You find yourself going on a Mall Date with Gabrielle, the coolest singer-guitarist in school.]</tw-passagedata><tw-passagedata pid="85" name="go with Avery" tags="" position="3850,475" size="100,100">(text-color: orange)[You find yourself going on a Mountaineering Date with Avery, the coolest bassist in school.]
+&lt;!--asks if wanna watch him work out: doesnt matter answer--&gt;
+The mountains rise endlessly towards the sky, tipped with a dusty layer of frost. Mist floats on the forest floor below, and moss softens and obscures your footsteps. You see Avery flexing in a clearing just ahead, and he proceeds to tell you the story of this magical local. 
+(text-color: #1B4F72)[&quot;I knew I had to take training up a notch. Finding a place of deep serenety in which to practice is basically essential to punching harder] (he demonstrates this by punching the air impressively). (text-color: #1B4F72)[That&#39;s why I was so stoked when I stumbled across this place!&quot;]
+He, of course, is shirtless. You&#39;ve learned by now his moral opposition to the covering of hard-earned muscle, considering it a cardinal sin. 
+Flexing again, he asks you if you wanna watch him work out.
 
-asks if wanna watch him work out: doesnt matter answer</tw-passagedata><tw-passagedata pid="86" name="go with Griffin" tags="" position="3675,1000" size="100,100">&lt;!--What if he just takes you to his own solo performance OPEN MIC and then Ray shows up and they both like excuse themselves and you can catch them making out?--&gt;
+[[Of course I wanna watch you work out!]] 
 
-(text-color: orange)[You find yourself going on a date with Griffin, the coolest guitarist in school.]</tw-passagedata><tw-passagedata pid="87" name="Deny graciously" tags="" position="2750,1450" size="100,100">He shrugs, then remarks &quot;You were pretty good back there, I don&#39;t suppose you would want to accompany me to an all-inclusive hot springs retreat?&quot;
+[[No way dude, isn&#39;t this supposed to be a date?]]</tw-passagedata><tw-passagedata pid="86" name="go with Griffin" tags="" position="4275,175" size="100,100">&lt;!--What if he just takes you to his own solo performance OPEN MIC and then Ray shows up and they both like excuse themselves and you can catch them making out?--&gt;
 
-[[yes, this guy&#39;s hot as hell!]] or [[check my other options]] again</tw-passagedata><tw-passagedata pid="88" name="Smoke with Andy" tags="" position="2625,1525" size="100,100">Don&#39;t do drugs, kids.
+(text-color: orange)[You find yourself going on a date with Griffin, the coolest guitarist in school.]
 
-&#39;&#39;You die from cancer&#39;&#39;</tw-passagedata><tw-passagedata pid="89" name="yes, this guy&#39;s hot as hell!" tags="" position="2875,1575" size="100,100">(display: &quot;go with Andy&quot;)</tw-passagedata><tw-passagedata pid="90" name="Let him keep going" tags="" position="2075,1475" size="100,100">He starts explaining how hot springs heat the baths, and also power the arcade. He&#39;s in the middle of saying the word (text-colour:red)[&quot;hydropower&quot;] for the third time when...
+The city buzzes with activity, percolating with heady anticipation. It seems that the night itself knows about the show, and it blesses the street with a flickering glow. The full moon rises and casts it&#39;s light across the world, sharpening your surroundings with silver. Griffin waves you towards the venue entrance, and guides you towards a table. He sits besides you giddily, and proceeds to impatiently wait his turn for the [[open mic.]] </tw-passagedata><tw-passagedata pid="87" name="Deny graciously" tags="" position="3300,600" size="100,100">He shrugs, then remarks &quot;You were pretty good back there, I don&#39;t suppose you would want to accompany me to an all-inclusive hot springs retreat?&quot;
+
+[[yes, this guy&#39;s hot as hell!]] or [[check my other options]] again</tw-passagedata><tw-passagedata pid="88" name="Smoke with Andy" tags="" position="3175,675" size="100,100">Don&#39;t do drugs, kids.
+
+&#39;&#39;You die from cancer&#39;&#39;</tw-passagedata><tw-passagedata pid="89" name="yes, this guy&#39;s hot as hell!" tags="" position="3425,725" size="100,100">(display: &quot;go with Andy&quot;)</tw-passagedata><tw-passagedata pid="90" name="Let him keep going" tags="" position="2625,625" size="100,100">He starts explaining how hot springs heat the baths, and also power the arcade. He&#39;s in the middle of saying the word (text-colour:red)[&quot;hydropower&quot;] for the third time when...
 
 you start explaining back to HIM [[how hydro thermodynamics REALLY works]] or
 
-you [[cut him off]] and steer the conversation towards a more interesting subject.</tw-passagedata><tw-passagedata pid="91" name="I don&#39;t remember this guy talking so much?" tags="" position="2250,1500" size="100,100">Maybe he&#39;s warming up to you.
+you [[cut him off]] and steer the conversation towards a more interesting subject.</tw-passagedata><tw-passagedata pid="91" name="I don&#39;t remember this guy talking so much?" tags="" position="2800,650" size="100,100">Maybe he&#39;s warming up to you.
 
-[[Let him keep going]] </tw-passagedata><tw-passagedata pid="92" name="how hydro thermodynamics REALLY works" tags="" position="2150,1625" size="100,100">That&#39;s right, you&#39;ve studied for this. Years of hard work have accumulated just for this moment. This glorious moment. The moment when you can tell a cute boy all about planform geometry,  it&#39;s associated transfer of sedement, and the subsequent concentration and/or dissipation of energy. Finally.
+[[Let him keep going]] </tw-passagedata><tw-passagedata pid="92" name="how hydro thermodynamics REALLY works" tags="" position="2700,775" size="100,100">That&#39;s right, you&#39;ve studied for this. Years of hard work have accumulated just for this moment. This glorious moment. The moment when you can tell a cute boy all about planform geometry,  it&#39;s associated transfer of sedement, and the subsequent concentration and/or dissipation of energy. Finally.
 
-Obviously, [[he&#39;s impressed]].</tw-passagedata><tw-passagedata pid="93" name="he&#39;s impressed" tags="" position="2300,1800" size="100,100">(text-colour:red)[&quot;You really know your stuff!&quot;] he exclames. Then his cheeks turn red, and lifting his hands to his face, he excuses himself due to a sudden nosebleed. 
+Obviously, [[he&#39;s impressed]].</tw-passagedata><tw-passagedata pid="93" name="he&#39;s impressed" tags="" position="2850,950" size="100,100">(text-colour:red)[&quot;You really know your stuff!&quot;] he exclames. Then his cheeks turn red, and lifting his hands to his face, he excuses himself due to a sudden nosebleed. 
 When he returns, his conversation seems a little strained. You figure maybe its your time to lead.
 
 [[You say this is an arcade??]] 
 
-[[It&#39;s really beautiful here]]</tw-passagedata><tw-passagedata pid="94" name="cut him off" tags="" position="1900,1600" size="100,100">[[You say this is an arcade??]]
+[[It&#39;s really beautiful here]]</tw-passagedata><tw-passagedata pid="94" name="cut him off" tags="" position="2450,750" size="100,100">[[You say this is an arcade??]]
 
-[[It&#39;s really beautiful here]]</tw-passagedata><tw-passagedata pid="95" name="You say this is an arcade??" tags="" position="1750,1775" size="100,100">He confirms, (text-colour:red)[&quot;Yes, and a very exclusive one at that&quot;] he smiles and adds(text-colour:red)[ &quot;they have floating tables, that&#39;s right - //floating tables//. You can soak and play pacman, it&#39;s a huge electrification risk, wanna see?&quot;]
+[[It&#39;s really beautiful here]]</tw-passagedata><tw-passagedata pid="95" name="You say this is an arcade??" tags="" position="2300,925" size="100,100">He confirms, (text-colour:red)[&quot;Yes, and a very exclusive one at that&quot;] he smiles and adds(text-colour:red)[ &quot;they have floating tables, that&#39;s right - //floating tables//. You can soak and play pacman, it&#39;s a huge electrification risk, wanna see?&quot;]
 
 [[oh yeah, I gotta]]
 
-[[maybe lets do something safer]]</tw-passagedata><tw-passagedata pid="96" name="It&#39;s really beautiful here" tags="" position="2125,1900" size="100,100">(text-colour:red)[&quot;It&#39;s gorgeous&quot;] he agrees, (text-colour:red)[&quot;Avery knows all the best spots. [[Shall we enjoy in its pleasures]]?&quot;]</tw-passagedata><tw-passagedata pid="97" name="oh yeah, I gotta" tags="" position="1675,1950" size="100,100">It&#39;s epic. The serenity of the steaming spring coupled with the buzzing electricity of the games. Whooping and hollering serve as the backdrop to a cloudless sky, content faces bobbing in the water. Gaming tables rise like glowing glaciers from the stream; some accompanied by huddles of people, brilliant from the baths.
+[[maybe lets do something safer]]</tw-passagedata><tw-passagedata pid="96" name="It&#39;s really beautiful here" tags="" position="2675,1050" size="100,100">(text-colour:red)[&quot;It&#39;s gorgeous&quot;] he agrees, (text-colour:red)[&quot;Avery knows all the best spots. [[Shall we enjoy in its pleasures]]?&quot;]</tw-passagedata><tw-passagedata pid="97" name="oh yeah, I gotta" tags="" position="2225,1100" size="100,100">It&#39;s epic. The serenity of the steaming spring coupled with the buzzing electricity of the games. Whooping and hollering serve as the backdrop to a cloudless sky, content faces bobbing in the water. Gaming tables rise like glowing glaciers from the stream; some accompanied by huddles of people, brilliant from the baths.
 
 (text-color:red)[&quot;I don&#39;t know how they make it happen, but they do!&quot;] remarks Andy happily, (text-colour:red)[&quot;We should play!&quot;]
 
 [[oh hell yeah]]
-ok, now that I think about it... [[maybe lets do something safer]] </tw-passagedata><tw-passagedata pid="98" name="maybe lets do something safer" tags="" position="1925,2100" size="100,100">(text-colour:red)[&quot;I respect that&quot;] he says, (text-colour:red)[&quot;Maybe we can just soak?&quot;]
+ok, now that I think about it... [[maybe lets do something safer]] </tw-passagedata><tw-passagedata pid="98" name="maybe lets do something safer" tags="" position="2475,1250" size="100,100">(text-colour:red)[&quot;I respect that&quot;] he says, (text-colour:red)[&quot;Maybe we can just soak?&quot;]
 
-(display: &quot;baths&quot;)</tw-passagedata><tw-passagedata pid="99" name="oh hell yeah" tags="" position="1750,2175" size="100,100">&lt;!-- When I get better at programming this would be a great oppertunity to implement another mini-game --&gt;
+(display: &quot;baths&quot;)</tw-passagedata><tw-passagedata pid="99" name="oh hell yeah" tags="" position="2300,1325" size="100,100">&lt;!-- When I get better at programming this would be a great oppertunity to implement another mini-game --&gt;
 You both wade into the water, making your way towards the island arcade. The heated stream billows with smoke and flowery fragrence, stinging and refreshing at the same time. The water, like the games, seems charged. Reaching the booths, Andy asks which game you&#39;d like to play.
 
 [[pacman]] or [[space invaders]]
-</tw-passagedata><tw-passagedata pid="100" name="Shall we enjoy in its pleasures" tags="" position="2250,2000" size="100,100">He asks if you would rather [[go to the arcade]], or just [[enjoy the baths themselves]].</tw-passagedata><tw-passagedata pid="101" name="go to the arcade" tags="" position="2150,2175" size="100,100">(display: &quot;oh yeah, I gotta&quot;)</tw-passagedata><tw-passagedata pid="102" name="enjoy the baths themselves" tags="" position="2275,2175" size="100,100">(display: &quot;baths&quot;)</tw-passagedata><tw-passagedata pid="103" name="baths" tags="" position="2375,2325" size="100,100">He leads you to a separate, more traditionally styled bath (one without an arcade) and you both sink into the water. Dappled sunlight splashes across his features; steam rises, blanketing your surroundings, and encloses the two of you in a world of your own. The heated water prickles your skin, threatening the edge of your tolerance, and for a moment peace takes over the world.  
+</tw-passagedata><tw-passagedata pid="100" name="Shall we enjoy in its pleasures" tags="" position="2800,1150" size="100,100">He asks if you would rather [[go to the arcade]], or just [[enjoy the baths themselves]].</tw-passagedata><tw-passagedata pid="101" name="go to the arcade" tags="" position="2700,1325" size="100,100">(display: &quot;oh yeah, I gotta&quot;)</tw-passagedata><tw-passagedata pid="102" name="enjoy the baths themselves" tags="" position="2825,1325" size="100,100">(display: &quot;baths&quot;)</tw-passagedata><tw-passagedata pid="103" name="baths" tags="" position="2925,1475" size="100,100">He leads you to a separate, more traditionally styled bath (one without an arcade) and you both sink into the water. Dappled sunlight splashes across his features; steam rises, blanketing your surroundings, and encloses the two of you in a world of your own. The heated water prickles your skin, threatening the edge of your tolerance, and for a moment peace takes over the world.  
 Andy was saying something. 
 (text-colour:red)[&quot;...Yeah, so I was thinking we could go to my room, do it, and never speak of this again.&quot;]
 
@@ -579,25 +600,29 @@ fishLeft ++
 setTimeout(moveFish, 17)
 }
 moveFish()
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="104" name="what??" tags="" position="2375,2475" size="100,100">(text-colour:red)[&quot;OMG I know those guys!&quot;] he exclaims, completely ignoring your shock, and pointing emphatically to the left. &quot;[[I wonder what Griffin is doing here without Gabrielle?]]&quot;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="104" name="what??" tags="" position="2925,1625" size="100,100">(text-colour:red)[&quot;OMG I know those guys!&quot;] he exclaims, completely ignoring your shock, and pointing emphatically to the left. &quot;[[I wonder what Griffin is doing here without Gabrielle?]]&quot;
 
-&lt;img src=&quot;images/andy-baths.png&quot; alt=&quot;Andy baths&quot; style=&quot;width: 100%; height: auto; margin-right: 20px;&quot;&gt; </tw-passagedata><tw-passagedata pid="105" name="I wonder what Griffin is doing here without Gabrielle?" tags="" position="2375,2625" size="100,100">&lt;img src=&quot;/Users/avafox/development/Sugoi_Txt_Adv/images/griffin-ray-baths.png&quot; alt=&quot;Griffin and Ray baths&quot; style=&quot;width: 70%; display: block; margin-left: auto;&quot;&gt;
+&lt;img src=&quot;images/andy-baths.png&quot; alt=&quot;Andy baths&quot; style=&quot;width: 100%; height: auto; margin-right: 20px;&quot;&gt; </tw-passagedata><tw-passagedata pid="105" name="I wonder what Griffin is doing here without Gabrielle?" tags="" position="2925,1775" size="100,100">&lt;img src=&quot;/Users/avafox/development/Sugoi_Txt_Adv/images/griffin-ray-baths.png&quot; alt=&quot;Griffin and Ray baths&quot; style=&quot;width: 70%; display: block; margin-left: auto;&quot;&gt;
 
 Your attention swings to the vista provided by Andy&#39;s finger: Griffin R. and an unknown somebody, relaxing together in a tub. This new stranger, like everyone in this story, is handsome - though a little less self-assured. He&#39;s laughing at some unheard joke, presumably told by Griffin, and is glowing from exhileration. It&#39;s possible they could be brothers, given their look and manner, only Griffin&#39;s curly hair is a shocking blonde - and the other&#39;s is deep black. 
 
-[[go and talk to them]] or [[ignore them and stay with Andy]]</tw-passagedata><tw-passagedata pid="106" name="pacman" tags="" position="1700,2300" size="100,100"></tw-passagedata><tw-passagedata pid="107" name="space invaders" tags="" position="1875,2300" size="100,100">&lt;!--Would be so cool to actually put space invaders in here omg--&gt;
-</tw-passagedata><tw-passagedata pid="108" name="go and talk to them" tags="" position="2250,2800" size="100,100">Both you and Andy make your way over to the two young men in the tub. Griffin jumps a little as he sees you approach.
+[[go and talk to them]] or [[ignore them and stay with Andy]]</tw-passagedata><tw-passagedata pid="106" name="pacman" tags="" position="2150,1475" size="100,100">Andy pulls out a shiny quarter, winks, and pays for the game. You both have a blast playing pacman. </tw-passagedata><tw-passagedata pid="107" name="space invaders" tags="" position="2400,1475" size="100,100">&lt;!--Would be so cool to actually put space invaders in here omg--&gt;
+Andy pulls out a shiny quarter, winks, and pays for the game. You both have a blast playing space invaders. </tw-passagedata><tw-passagedata pid="108" name="go and talk to them" tags="" position="2800,1950" size="100,100">Both you and Andy make your way over to the two young men in the tub. Griffin jumps a little as he sees you approach.
 &quot;Hi, guys! Small world! Didn&#39;t expect to see you here!&quot; he chirps cheerily. 
 
 [[&quot;I could say the same about you.&quot;]]
 
-</tw-passagedata><tw-passagedata pid="109" name="ignore them and stay with Andy" tags="" position="2500,2800" size="100,100">Andy is already halfway across the room headed towards Griffin and his companion. 
+</tw-passagedata><tw-passagedata pid="109" name="ignore them and stay with Andy" tags="" position="3050,1950" size="100,100">Andy is already halfway across the room headed towards Griffin and his companion. 
 
-</tw-passagedata><tw-passagedata pid="110" name="&quot;I could say the same about you.&quot;" tags="" position="2025,2950" size="100,100">[&quot;Yeah, well... me and Ray love arcades!&quot;]
+</tw-passagedata><tw-passagedata pid="110" name="&quot;I could say the same about you.&quot;" tags="" position="2575,2100" size="100,100">[&quot;Yeah, well... me and Ray love arcades!&quot;]
 
 [[&quot;You&#39;re in the baths, tho&quot;]]
 
-[[&quot;ah, yes, makes sense&quot;]]</tw-passagedata><tw-passagedata pid="111" name="&quot;You&#39;re in the baths, tho&quot;" tags="" position="1800,3175" size="100,100">(text-color: gray)[&quot;We like baths, too.&quot;] replies Ray, eyeing you suspiciously.</tw-passagedata><tw-passagedata pid="112" name="&quot;ah, yes, makes sense&quot;" tags="" position="2125,3150" size="100,100"></tw-passagedata></tw-storydata>
+[[&quot;ah, yes, makes sense&quot;]]</tw-passagedata><tw-passagedata pid="111" name="&quot;You&#39;re in the baths, tho&quot;" tags="" position="2400,2300" size="100,100">(text-color: gray)[&quot;We like baths, too.&quot;] replies Ray, eyeing you suspiciously.</tw-passagedata><tw-passagedata pid="112" name="&quot;ah, yes, makes sense&quot;" tags="" position="2700,2300" size="100,100">They both nod back at you in unison. </tw-passagedata><tw-passagedata pid="113" name="No way dude, isn&#39;t this supposed to be a date?" tags="" position="3975,600" size="100,100">He doesn&#39;t seem to be listening, and starts working out anyways. Despite yourself, it truely is a pleasure to watch, and it&#39;s all you can do not to fall over from the gust of his powerful punches and kinetic kicks.</tw-passagedata><tw-passagedata pid="114" name="Of course I wanna watch you work out!" tags="" position="3750,600" size="100,100">I mean, who wouldn&#39;t? This dude is well toned, and is perfectly willing to show it off. Happily, he begins to train at your assent. It truely is a pleasure to watch, and it&#39;s all you can do not to fall over from the gust of his powerful punches and kinetic kicks.</tw-passagedata><tw-passagedata pid="115" name="open mic." tags="" position="4375,350" size="100,100">It appears his slot has been scheduled last. Poetry, sketch comedy, and solo acoustic singer-songwriting seem to fill up most of the schedule. It doesn&#39;t seem all gone to waste, though, because he leans over now and again to whisper a witty, stinging remark about each perfomance into your ear. 
+
+[[play game and poke fun back]]
+
+[[laugh politely and continue watching the show]]</tw-passagedata><tw-passagedata pid="116" name="play game and poke fun back" tags="" position="4300,500" size="100,100">Eyes flashing brightly, </tw-passagedata><tw-passagedata pid="117" name="laugh politely and continue watching the show" tags="" position="4500,500" size="100,100">He seems to understand, and stops his remarks. Bored acquiescence overtakes his features, and slumping heavily on the table, supporting his chin with his hands, he resigns to watch the show. Now and again, however, he can&#39;t seem to help muttering beneath his breath. </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
