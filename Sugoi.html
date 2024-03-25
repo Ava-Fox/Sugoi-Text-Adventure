@@ -35,7 +35,47 @@ img {
   text-align: right;
   position: fixed;
   margin-right: 10px;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Practice" color="purple"></tw-tag><tw-passagedata pid="1" name="yes!!" tags="" position="1200,200" size="100,100">{
+}
+
+tw-story #show {
+  background-image: url("/Users/avafox/development/Sugoi_Txt_Adv/images/fireworks.png");
+  border-radius: 25px;
+}
+
+.paddle {
+    width: 50px;
+    height: 200px;
+    background-color: pink;
+    border: 5px solid black;
+}
+
+.paddleLeft {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-left: 20px;
+}
+
+.paddleRight {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-right: 20px;
+}
+
+#ball {
+    position: fixed;
+    right: 60;
+    top: 0;
+    height: 50px;
+    width: auto;
+  	border: none;
+}
+
+.score {
+    color: aliceblue;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Practice" color="purple"></tw-tag><tw-passagedata pid="1" name="yes!!" tags="" position="1200,200" size="100,100">{
 (set: $andypoints to 0)
 (set: $averypoints to 0)
 (set: $gabriellepoints to 0)
@@ -54,7 +94,7 @@ img {
 }
 (text-color:#117A65)+(font:&quot;Times New Roman&quot;)[&quot;Well I like your stuff, $name. What do you say about coming over to my band&#39;s next practice to jam?&quot;]
 
-You realize who you&#39;re talking to. Reality shifts and everything comes into focus as you find yourself conversing with the one and only (text-color:#117A65)[Griffen R.], the hottest, most talented, most popular guitarist in the school&#39;s most beloved band.
+You realize who you&#39;re talking to. Reality shifts and everything comes into focus as you find yourself conversing with the one and only (text-color:#117A65)[Griffin R.], the hottest, most talented, most popular guitarist in the school&#39;s most beloved band.
 
 Will you...
 
@@ -67,11 +107,17 @@ If you were a pirate you would certainly be shivering your timbers, because as y
 Will you...
 [[introduce yourself]] or [[be introduced]]</tw-passagedata><tw-passagedata pid="3" name="stay at school" tags="" position="1400,200" size="100,100">You realize you&#39;re too much of a loser to be cool and you drop all of your stuff in your rush to escape, embarrassing yourself thoroughly.
 
-&#39;&#39;The End, dummy.&#39;&#39;</tw-passagedata><tw-passagedata pid="4" name="gabrielle" tags="" position="4675,100" size="100,100">(set: $originalSuiter to &quot;gabrielle&quot;)
+&#39;&#39;The End, dummy.&#39;&#39;</tw-passagedata><tw-passagedata pid="4" name="gabrielle" tags="" position="5325,100" size="100,100">(set: $originalSuiter to &quot;gabrielle&quot;)
 After practice, Gabrielle approaches you.
 (text-color: #EF22BA)[&quot;When you told me I was pretty&quot;], she says (text-color: #EF22BA)[&quot;I felt that. It really resonated, you know. I was wondering if you wanted to go to the mall next Saturday with me to pick out my next greatest outfit?&quot;]
 
-[[go with Gabrielle]] or [[check my other options]]</tw-passagedata><tw-passagedata pid="5" name="Griffin" tags="" position="5200,100" size="100,100">(set: $originalSuiter to &quot;griffin&quot;)
+[[go with Gabrielle]] or [[check my other options]]
+
+&lt;!--
+
+Finding outfit for the upcoming show, it&#39;s a big deal because the Mayor is going to be there. Maybe it&#39;s also an anniversary? 1 year? Yeah, and that&#39;s when she finds out she&#39;s been cheated on. Chaos ensues.
+
+--&gt;</tw-passagedata><tw-passagedata pid="5" name="Griffin" tags="" position="5850,100" size="100,100">(set: $originalSuiter to &quot;griffin&quot;)
 After practice, Griffin approaches you.
 (if: $windrumbattle)[ 
 (if: $middlefinger)[(text-color:#117A65)[&quot;You were very impressive back there&quot;], he says, and now, smiling (text-color:#117A65)[&quot;And you&#39;ve got style, I&#39;m into that. Andy can be a bit of a twat, he&#39;s too full of himself, and needs to be taken down a notch or two sometimes. Anyways, there&#39;s actually gonna be a really cool local show this Saturday, I was wondering if you wanted to come with me?&quot;]]]
@@ -104,7 +150,7 @@ After practice, Andy approaches you.
 (else:)[
 (text-color:red)[&quot;You really know your stuff&quot;], he says. (text-color:red)[&quot;Your $instrument playing is incredible. So... I was wondering if you wanted to come with me to an all-inclusive hot springs retreat?&quot;]
 ]
-[[go with Andy]] or [[check my other options]]</tw-passagedata><tw-passagedata pid="7" name="avery" tags="" position="4175,100" size="100,100">(set: $originalSuiter to &quot;avery&quot;)
+[[go with Andy]] or [[check my other options]]</tw-passagedata><tw-passagedata pid="7" name="avery" tags="" position="4300,125" size="100,100">(set: $originalSuiter to &quot;avery&quot;)
 After practice, Avery approaches you.
 (if: $instrument is &quot;bass&quot;)[
 (text-color: #1B4F72)[&quot;You&#39;re a great bassist&quot;] he begins, then asks (text-color: #1B4F72)[&quot;if you&#39;re interested I would love to show you my training arena in the mountains sometime?]]
@@ -220,7 +266,7 @@ axe for the day. What do you do?
 (text-color:#EF22BA)[“Well, don’t make yourself too comfortable.”] remarks Gabrielle, 
 ](text-color:#EF22BA)[“that chair wasn’t made to be //sat// on.”]
 
-(display: &quot;refocus&quot;)</tw-passagedata><tw-passagedata pid="21" name="Explore the room" tags="" position="900,1800" size="100,100">You circle the perimeter of the room and take in your surroundings. Gray-blue carpets stretch out underneath a mahogany drum set, outlined by a gorgeous view of the [[ocean]] radiating from a set of sliding glass doors that beckon you outside. </tw-passagedata><tw-passagedata pid="22" name="Stay put" tags="" position="1200,1800" size="100,100">
+(display: &quot;refocus&quot;)</tw-passagedata><tw-passagedata pid="21" name="Explore the room" tags="" position="900,1800" size="100,100">You circle the perimeter of the room and take in your surroundings. GRandy-blue carpets stretch out underneath a mahogany drum set, outlined by a gorgeous view of the [[ocean]] radiating from a set of sliding glass doors that beckon you outside. </tw-passagedata><tw-passagedata pid="22" name="Stay put" tags="" position="1200,1800" size="100,100">
 
 (if: $instrument is &quot;drums&quot;)[
 (text-color:red)[&quot;Hey, step aside - unless you&#39;d like to //help// or whatever.&quot;] You jump as you realize you’ve blocked the entryway, and scoot sideways to allow Andy through. You see he&#39;s exerting himself, carrying a sparkly blue bass drum. He buzzes with annoyance as he slides past you and places the drum next to his own set, outlined by an [[ocean view]]. 
@@ -526,8 +572,8 @@ Griffin stretches obviously and obnoxiously, clearly trying to get your attentio
 [[go with Avery]] or [[check my other options]] again</tw-passagedata><tw-passagedata pid="76" name="walk up to Andy" tags="" position="3500,625" size="100,100">Andy takes a drag from his cigarrette, and regards you with a calculating look. Exhaling, he presents it to you - wordlessly offering you a smoke.
 [[Smoke with Andy]] or [[Deny graciously]]</tw-passagedata><tw-passagedata pid="77" name="Accept Gabrielle&#39;s offer" tags="" position="3350,725" size="100,100">(display: &quot;go with Gabrielle&quot;)</tw-passagedata><tw-passagedata pid="78" name="give Griffin your attention" tags="" position="3400,900" size="100,100">(text-color:#117A65)[&quot;$name!&quot;], he says, continuing to stretch (text-color:#117A65)[&quot;You really rocked back there, you can really play! Hey, so there&#39;s gonna be this really great local show this weekend... wanna come?&quot;]
 
-[[go with Griffin]] or [[check my other options]] again</tw-passagedata><tw-passagedata pid="79" name="go with Gabrielle" tags="" position="4675,200" size="100,100">&lt;h4&gt;(text-color: orange)[You find yourself going on a mall date with Gabrielle, the coolest girl in school.]&lt;/h4&gt;
-As your car putters into the parking lot, you can&#39;t help looking at the cotten candy sky. An expanse of pink, occasionally hindered by whispers of white, cast a purple glow onto the tarmac below. The lot, being situated on a hill, lifts you into the atmosphere and gives the heady sense of flying. Gabrielle zooms in one smooth motion into the parking space besides you, and checks her reflection briefly in the rearview mirror. Deeming herself perfect, she exits her car and flashes you a toothy grin. She exudes an air of regality, a Queen merely surveying what&#39;s hers, and beckons for you to [[follow her inside the mall]]. </tw-passagedata><tw-passagedata pid="80" name="go with Avery" tags="" position="4175,300" size="100,100">&lt;h4&gt;(text-color: orange)[You find yourself going on a Mountaineering Date with Avery, the coolest bassist in school.]&lt;/h4&gt;
+[[go with Griffin]] or [[check my other options]] again</tw-passagedata><tw-passagedata pid="79" name="go with Gabrielle" tags="" position="5325,250" size="100,100">&lt;h4&gt;(text-color: orange)[You find yourself going on a mall date with Gabrielle, the coolest girl in school.]&lt;/h4&gt;
+As your car putters into the parking lot, you can&#39;t help looking at the cotten candy sky. An expanse of pink, occasionally hindered by whispers of white, cast a purple glow onto the tarmac below. The lot, being situated on a hill, lifts you into the atmosphere and gives the heady sense of flying. Gabrielle zooms in one smooth motion into the parking space besides you, and checks her reflection briefly in the rearview mirror. Deeming herself perfect, she exits her car and flashes you a toothy grin. She exudes an air of regality, a Queen merely surveying what&#39;s hers, and beckons for you to [[follow her inside the mall]]. </tw-passagedata><tw-passagedata pid="80" name="go with Avery" tags="" position="4300,325" size="100,100">&lt;h4&gt;(text-color: orange)[You find yourself going on a Mountaineering Date with Avery, the coolest bassist in school.]&lt;/h4&gt;
 &lt;!--asks if wanna watch him work out: doesnt matter answer--&gt;
 The mountains rise endlessly towards the sky, tipped with a dusty layer of frost. Mist floats on the forest floor below, and moss softens and obscures your footsteps. You see Avery flexing in a clearing just ahead, and he proceeds to tell you the story of this magical local. 
 (text-color: #1B4F72)[&quot;I knew I had to take training up a notch. Finding a place of deep serenety in which to practice is basically essential to punching harder] (he demonstrates this by punching the air impressively). (text-color: #1B4F72)[That&#39;s why I was so stoked when I stumbled across this place!&quot;]
@@ -536,7 +582,7 @@ Flexing again, he asks you if you wanna watch him work out.
 
 [[Of course I wanna watch you work out!]] 
 
-[[No way dude, isn&#39;t this supposed to be a date?]]</tw-passagedata><tw-passagedata pid="81" name="go with Griffin" tags="" position="5200,300" size="100,100">&lt;!--What if he just takes you to his own solo performance OPEN MIC and then Ray shows up and they both like excuse themselves and you can catch them making out?--&gt;
+[[No way dude, isn&#39;t this supposed to be a date?]]</tw-passagedata><tw-passagedata pid="81" name="go with Griffin" tags="" position="5850,300" size="100,100">&lt;!--What if he just takes you to his own solo performance OPEN MIC and then Randy shows up and they both like excuse themselves and you can catch them making out?--&gt;
 
 &lt;h4&gt;(text-color: orange)[You find yourself going on a date with Griffin, the coolest guitarist in school.]&lt;/h4&gt;
 
@@ -604,68 +650,301 @@ setTimeout(moveFish, 17)
 moveFish()
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="99" name="what??" tags="" position="2550,1800" size="100,100">(text-colour:red)[&quot;OMG I know those guys!&quot;] he exclaims, completely ignoring your shock, and pointing emphatically to the left. &quot;[[I wonder what Griffin is doing here without Gabrielle?]]&quot;
 
-&lt;img src=&quot;images/andy-baths.png&quot; alt=&quot;Andy baths&quot; style=&quot;width: 100%; height: auto; margin-right: 20px;&quot;&gt; </tw-passagedata><tw-passagedata pid="100" name="I wonder what Griffin is doing here without Gabrielle?" tags="" position="2550,1950" size="100,100">&lt;img src=&quot;images/griffin-ray-baths.png&quot; alt=&quot;Griffin and Ray baths&quot; style=&quot;width: 70%; display: block; margin-left: 30px;&quot;&gt;
+&lt;img src=&quot;images/andy-baths.png&quot; alt=&quot;Andy baths&quot; style=&quot;width: 100%; height: auto; margin-right: 20px;&quot;&gt; </tw-passagedata><tw-passagedata pid="100" name="I wonder what Griffin is doing here without Gabrielle?" tags="" position="2550,1950" size="100,100">&lt;img src=&quot;images/griffin-ray-baths.png&quot; alt=&quot;Griffin and Randy baths&quot; style=&quot;width: 70%; display: block; margin-left: 30px;&quot;&gt;
 
 Your attention swings to the vista provided by Andy&#39;s finger: Griffin R. and an unknown somebody, relaxing together in a tub. This new stranger, like everyone in this story, is handsome - though a little less self-assured. He&#39;s laughing at some unheard joke, presumably told by Griffin, and is glowing from exhileration. It&#39;s possible they could be brothers, given their look and manner, only Griffin&#39;s curly hair is a shocking blonde - and the other&#39;s is deep black. 
 
-[[go and talk to them]] or [[ignore them and stay with Andy]]</tw-passagedata><tw-passagedata pid="101" name="pacman" tags="" position="2150,1475" size="100,100">Andy pulls out a shiny quarter, winks, and pays for the game. You both have a blast playing pacman. 
-
-All that&#39;s left to do is [[enjoy the baths themselves]] </tw-passagedata><tw-passagedata pid="102" name="space invaders" tags="" position="2400,1475" size="100,100">&lt;!--Would be so cool to actually put space invaders in here omg--&gt;
-Andy pulls out a shiny quarter, winks, and pays for the game. You both have a blast playing space invaders. 
-
-All that&#39;s left to do is [[enjoy the baths themselves]] </tw-passagedata><tw-passagedata pid="103" name="go and talk to them" tags="" position="2425,2125" size="100,100">Both you and Andy make your way over to the two young men in the tub. Griffin jumps a little as he sees you approach.
+[[go and talk to them]] or [[ignore them and stay with Andy]]</tw-passagedata><tw-passagedata pid="101" name="pacman" tags="" position="2150,1475" size="100,100">Andy pulls out a shiny quarter, winks, and pays for the game. Nothing happens. It turns out Pacman is waterlogged. Weirdly, every game is waterlogged except for [[pong]]. 
+</tw-passagedata><tw-passagedata pid="102" name="space invaders" tags="" position="2400,1475" size="100,100">&lt;!--Would be so cool to actually put space invaders in here omg--&gt;
+Andy pulls out a shiny quarter, winks, and pays for the game. Nothing happens. It turns out Space Invaders is waterlogged. Weirdly, every game is waterlogged except for [[pong]].</tw-passagedata><tw-passagedata pid="103" name="go and talk to them" tags="" position="2425,2125" size="100,100">Both you and Andy make your way over to the two young men in the tub. Griffin jumps a little as he sees you approach.
 &quot;Hi, guys! Small world! Didn&#39;t expect to see you here!&quot; he chirps cheerily. 
 
 (display: &quot;responses&quot;)</tw-passagedata><tw-passagedata pid="104" name="ignore them and stay with Andy" tags="" position="2675,2125" size="100,100">Andy is already halfway across the room headed towards Griffin and his companion, leaving you no choice but to follow. Griffin jumps a little as he sees you approach.
 &quot;Hi, guys! Small world! Didn&#39;t expect to see you here!&quot; he chirps cheerily.
 
-(display: &quot;responses&quot;)</tw-passagedata><tw-passagedata pid="105" name="&quot;I could say the same about you.&quot;" tags="" position="2550,2500" size="100,100">[&quot;Yeah, well... me and Ray love arcades!&quot;]
+(display: &quot;responses&quot;)</tw-passagedata><tw-passagedata pid="105" name="&quot;I could say the same about you.&quot;" tags="" position="2550,2500" size="100,100">[&quot;Yeah, well... me and Randy love arcades!&quot;]
 
 [[&quot;You&#39;re in the baths, tho&quot;]]
 
-[[&quot;ah, yes, makes sense&quot;]]</tw-passagedata><tw-passagedata pid="106" name="&quot;You&#39;re in the baths, tho&quot;" tags="" position="2400,2725" size="100,100">(text-color: gray)[&quot;We like baths, too.&quot;] replies Ray, eyeing you suspiciously.</tw-passagedata><tw-passagedata pid="107" name="&quot;ah, yes, makes sense&quot;" tags="" position="2700,2725" size="100,100">They both nod back at you in unison. </tw-passagedata><tw-passagedata pid="108" name="No way dude, isn&#39;t this supposed to be a date?" tags="" position="4300,425" size="100,100">He doesn&#39;t seem to be listening, and starts working out anyways. Despite yourself, it truely is a pleasure to watch, and it&#39;s all you can do not to fall over from the gust of his powerful punches and kinetic kicks. He emphasises each motion with a (text-color: #1B4F72)[&quot;HYUH&quot;], making everything seem even more impressive. 
+[[&quot;ah, yes, makes sense&quot;]]</tw-passagedata><tw-passagedata pid="106" name="&quot;You&#39;re in the baths, tho&quot;" tags="" position="2400,2725" size="100,100">(text-color: gray)[&quot;We like baths, too.&quot;] replies Randy, eyeing you suspiciously.</tw-passagedata><tw-passagedata pid="107" name="&quot;ah, yes, makes sense&quot;" tags="" position="2700,2725" size="100,100">They both nod back at you in unison. </tw-passagedata><tw-passagedata pid="108" name="No way dude, isn&#39;t this supposed to be a date?" tags="" position="4425,450" size="100,100">He doesn&#39;t seem to be listening, and starts working out anyways. Despite yourself, it truely is a pleasure to watch, and it&#39;s all you can do not to fall over from the gust of his powerful punches and kinetic kicks. He emphasises each motion with a (text-color: #1B4F72)[&quot;HYUH&quot;], making everything seem even more impressive. 
 
-(display: &quot;after workout&quot;)</tw-passagedata><tw-passagedata pid="109" name="Of course I wanna watch you work out!" tags="" position="4075,425" size="100,100">I mean, who wouldn&#39;t? This dude is well toned, and is perfectly willing to show it off. Happily, he begins to train at your assent. It truely is a pleasure to watch, and it&#39;s all you can do not to fall over from the gust of his powerful punches and kinetic kicks. He emphasises each motion with a (text-color: #1B4F72)[&quot;HYUH&quot;], making everything seem even more impressive. 
-(display: &quot;after workout&quot;)</tw-passagedata><tw-passagedata pid="110" name="open mic." tags="" position="5300,475" size="100,100">It appears his slot has been scheduled last. Poetry, sketch comedy, and solo acoustic singer-songwriting seem to fill up most of the schedule. It doesn&#39;t seem all gone to waste, though, because he leans over now and again to whisper a witty, stinging remark about each perfomance into your ear. 
+(display: &quot;after workout&quot;)</tw-passagedata><tw-passagedata pid="109" name="Of course I wanna watch you work out!" tags="" position="4200,450" size="100,100">I mean, who wouldn&#39;t? This dude is well toned, and is perfectly willing to show it off. Happily, he begins to train at your assent. It truely is a pleasure to watch, and it&#39;s all you can do not to fall over from the gust of his powerful punches and kinetic kicks. He emphasises each motion with a (text-color: #1B4F72)[&quot;HYUH&quot;], making everything seem even more impressive. 
+(display: &quot;after workout&quot;)</tw-passagedata><tw-passagedata pid="110" name="open mic." tags="" position="5950,475" size="100,100">It appears his slot has been scheduled last. Poetry, sketch comedy, and solo acoustic singer-songwriting seem to fill up most of the schedule. It doesn&#39;t seem all gone to waste, though, because he leans over now and again to whisper a witty, stinging remark about each perfomance into your ear. 
 
 [[play game and poke fun back]]
 
-[[laugh politely and continue watching the show]]</tw-passagedata><tw-passagedata pid="111" name="play game and poke fun back" tags="" position="5225,625" size="100,100">Eyes flashing brightly, </tw-passagedata><tw-passagedata pid="112" name="laugh politely and continue watching the show" tags="" position="5425,625" size="100,100">He seems to understand, and stops his remarks. Bored acquiescence overtakes his features, and slumping heavily on the table, supporting his chin with his hands, he resigns to watch the show. Now and again, however, he can&#39;t seem to help muttering beneath his breath. </tw-passagedata><tw-passagedata pid="113" name="responses" tags="" position="2550,2275" size="100,100">[[&quot;I could say the same about you.&quot;]]</tw-passagedata><tw-passagedata pid="114" name="follow her inside the mall" tags="" position="4675,400" size="100,100">She leads you inside a place of bustling activity, which immediately ceaces as you enter. Ignoring this, Gabrielle turns and faces you. 
+[[laugh politely and continue watching the show]]</tw-passagedata><tw-passagedata pid="111" name="play game and poke fun back" tags="" position="5875,625" size="100,100">Eyes flashing brightly, </tw-passagedata><tw-passagedata pid="112" name="laugh politely and continue watching the show" tags="" position="6075,625" size="100,100">He seems to understand, and stops his remarks. Bored acquiescence overtakes his features, and slumping heavily on the table, supporting his chin with his hands, he resigns to watch the show. Now and again, however, he can&#39;t seem to help muttering beneath his breath. </tw-passagedata><tw-passagedata pid="113" name="responses" tags="" position="2550,2275" size="100,100">[[&quot;I could say the same about you.&quot;]]</tw-passagedata><tw-passagedata pid="114" name="follow her inside the mall" tags="" position="5325,400" size="100,100">She leads you inside a place of bustling activity, which immediately ceaces as you enter. Ignoring this, Gabrielle turns and faces you. 
 (text-color: #EF22BA)[&quot;So,&quot;] she starts, (text-color: #EF22BA)[&quot;I need something magnificent to wear. Well, even more magnificent than what I //usually// wear. It needs to be sexy. It needs to be shocking. Let&#39;s begin.&quot;]
-And with that, she turns on her heel and click-clacks her way [[through the mall]].</tw-passagedata><tw-passagedata pid="115" name="through the mall" tags="" position="4675,525" size="100,100">You notice the snuffing of activity wherever Gabrielle leads you, like a silent wave following wherever she goes, hushed voices resuming only once she passes. 
+And with that, she turns on her heel and click-clacks her way [[through the mall]].</tw-passagedata><tw-passagedata pid="115" name="through the mall" tags="" position="5325,525" size="100,100">You notice the snuffing of activity wherever Gabrielle leads you, like a silent wave following wherever she goes, hushed voices resuming only once she passes. 
 
-[[ask her what&#39;s up]] or just  [[go with it nonchalantly]]</tw-passagedata><tw-passagedata pid="116" name="ask her what&#39;s up" tags="" position="4600,675" size="100,100">She shrugs, but doesn&#39;t slow her motion. (text-color: #EF22BA)[&quot;They know not to disturb me here&quot;] she replies, (text-color: #EF22BA)[&quot;At school they can get autographs. Here, though? Here it&#39;s all business. I don&#39;t have time for fanatics.&quot;]
+[[ask her what&#39;s up]] or just  [[go with it nonchalantly]]</tw-passagedata><tw-passagedata pid="116" name="ask her what&#39;s up" tags="" position="5250,675" size="100,100">She shrugs, but doesn&#39;t slow her motion. (text-color: #EF22BA)[&quot;They know not to disturb me here&quot;] she replies, (text-color: #EF22BA)[&quot;At school they can get autographs. Here, though? Here it&#39;s all business. I don&#39;t have time for fanatics.&quot;]
 
-(display: &quot;go with it nonchalantly&quot;)</tw-passagedata><tw-passagedata pid="117" name="go with it nonchalantly" tags="" position="4775,675" size="100,100">She leads you to an inconspicuous corner, at the far end of the mall. Flipping her hair and placing a hand at her hip, she lifts her leg and slams it down brutally on the tiled floor. THUD - the sound echos throughout the cavernous halls, and for a moment - nothing. Then, steam starts seeping from the stomped tile beneath her foot, and with a THWUNK and a lift of a leg, it hinges open to reveal a hidden staircase leading [[somewhere unknown]]. </tw-passagedata><tw-passagedata pid="118" name="somewhere unknown" tags="" position="4675,850" size="100,100"></tw-passagedata><tw-passagedata pid="119" name="after workout" tags="" position="4175,600" size="100,100">After working out, his skin percolating with sweat, he nods at you and [[offers to show you around the gardens]]. </tw-passagedata><tw-passagedata pid="120" name="offers to show you around the gardens" tags="" position="4175,725" size="100,100">He simply gestures at your surroundings and says (text-color: #1B4F72)[&quot;This is my garden. Wilderness is my garden. It&#39;s beautiful, isn&#39;t it?&quot;]
+(display: &quot;go with it nonchalantly&quot;)</tw-passagedata><tw-passagedata pid="117" name="go with it nonchalantly" tags="" position="5425,675" size="100,100">She leads you to an inconspicuous corner, at the far end of the mall. Flipping her hair and placing a hand at her hip, she lifts her leg and slams it down brutally on the tiled floor. THUD - the sound echos throughout the cavernous halls, and for a moment - nothing. Then, steam starts seeping from the stomped tile beneath her foot, and with a THWUNK and a lift of a leg, it hinges open to reveal a hidden staircase leading [[somewhere unknown]]. </tw-passagedata><tw-passagedata pid="118" name="somewhere unknown" tags="" position="5325,850" size="100,100">Darkness subsides as you descend the obscured staircase, and for a moment you see nothing. Suddenly, blaring lights flash across your vision and blindness [[shows a different form.]]</tw-passagedata><tw-passagedata pid="119" name="after workout" tags="" position="4300,600" size="100,100">After working out, his skin percolating with sweat, he nods at you and [[offers to show you around the gardens]]. </tw-passagedata><tw-passagedata pid="120" name="offers to show you around the gardens" tags="" position="4300,725" size="100,100">He simply gestures at your surroundings and says (text-color: #1B4F72)[&quot;This is my garden. Wilderness is my garden. It&#39;s beautiful, isn&#39;t it?&quot;]
 
 [[um, yeah]]
 
-[[bro this is not a friggen garden]]</tw-passagedata><tw-passagedata pid="121" name="um, yeah" tags="" position="4050,875" size="100,100">He nods with satisfaction, extending a comfortable silence.
+[[bro this is not a friggen garden]]</tw-passagedata><tw-passagedata pid="121" name="um, yeah" tags="" position="4175,875" size="100,100">He nods with satisfaction, extending a comfortable silence.
 
-[[&quot;Dude, do you like... tend it or anything?&quot;]]</tw-passagedata><tw-passagedata pid="122" name="bro this is not a friggen garden" tags="" position="4275,875" size="100,100">(text-color: #1B4F72)[&quot;I beg to differ&quot;] he says, but offers no further argument. 
+[[&quot;Dude, do you like... tend it or anything?&quot;]]
 
-[[&quot;Dude, do you like... tend it or anything?&quot;]]</tw-passagedata><tw-passagedata pid="123" name="&quot;Dude, do you like... tend it or anything?&quot;" tags="" position="4275,1000" size="100,100">(text-color: #1B4F72)[&quot;Not particularly, I just like watching it grow.&quot;]
 
-[[&quot;Then it&#39;s not a friggen garden!&quot;]]</tw-passagedata><tw-passagedata pid="124" name="&quot;Then it&#39;s not a friggen garden!&quot;" tags="" position="4275,1125" size="100,100">(text-color: #1B4F72)[&quot;I think observation, in of itself, is an essential aspect of gardening. Why should that necesarily implicate tending? Planting, weeding, planning - it&#39;s all so exhausting. Superfluous, really. Why strain to do what Nature does best herself? No, I just like to watch.&quot;]
+[[&quot;So, what do you wanna do now?&quot;]]</tw-passagedata><tw-passagedata pid="122" name="bro this is not a friggen garden" tags="" position="4400,875" size="100,100">(text-color: #1B4F72)[&quot;I beg to differ&quot;] he says, but offers no further argument. 
+
+[[&quot;Dude, do you like... tend it or anything?&quot;]]</tw-passagedata><tw-passagedata pid="123" name="&quot;Dude, do you like... tend it or anything?&quot;" tags="" position="4400,1000" size="100,100">(text-color: #1B4F72)[&quot;Not particularly, I just like watching it grow.&quot;]
+
+[[&quot;Then it&#39;s not a friggen garden!&quot;]]</tw-passagedata><tw-passagedata pid="124" name="&quot;Then it&#39;s not a friggen garden!&quot;" tags="" position="4400,1125" size="100,100">(text-color: #1B4F72)[&quot;I think observation, in of itself, is an essential aspect of gardening. Why should that necesarily implicate tending? Planting, weeding, planning - it&#39;s all so exhausting. Superfluous, really. Why strain to do what Nature does best herself? No, I just like to watch.&quot;]
 
 [[&quot;That&#39;s a very poetic way of looking at things&quot;]]
 
 
-[[&quot;Well, one could argue that gardening is communion with Nature. And for communion to exist, communication has to exist as well. Without tending, without your side of the conversation, you&#39;re not communicating - you&#39;re not gardening. You&#39;re simply existing, which is fine I guess, but you can&#39;t go and call it something that it&#39;s not. Gardening is simply a term to describe your part in that conversation.&quot;]]
-
-
-</tw-passagedata><tw-passagedata pid="125" name="&quot;Well, one could argue that gardening is communion with Nature. And for communion to exist, communication has to exist as well. Without tending, without your side of the conversation, you&#39;re not communicating - you&#39;re not gardening. You&#39;re simply existing, which is fine I guess, but you can&#39;t go and call it something that it&#39;s not. Gardening is simply a term to describe your part in that conversation.&quot;" tags="" position="4275,1275" size="100,100">(text-color: #1B4F72)[&quot;Is it communicating your part in the conversation, or is it establishing dominance over the prose? Trying to tell Nature what to do is a silly exercise, so why try? Everyone knows the best gardeners merely mimic Nature, reaping the bounty of her method. In the end, they&#39;re just trying to recreate what is already actually happening. It seems a silly extra step, doesn&#39;t it?&quot;]
+[[&quot;Well, one could argue that gardening is communion with Nature. And for communion to exist, communication has to exist as well. Without tending, without your side of the conversation, you&#39;re not communicating - you&#39;re not gardening. You&#39;re simply existing, which is fine I guess, but you can&#39;t go and call it something that it&#39;s not. Gardening is simply a term to describe your part in that conversation.&quot;]]</tw-passagedata><tw-passagedata pid="125" name="&quot;Well, one could argue that gardening is communion with Nature. And for communion to exist, communication has to exist as well. Without tending, without your side of the conversation, you&#39;re not communicating - you&#39;re not gardening. You&#39;re simply existing, which is fine I guess, but you can&#39;t go and call it something that it&#39;s not. Gardening is simply a term to describe your part in that conversation.&quot;" tags="" position="4400,1275" size="100,100">(text-color: #1B4F72)[&quot;Is it communicating your part in the conversation, or is it establishing dominance over the prose? Trying to tell Nature what to do is a silly exercise, so why try? Everyone knows the best gardeners merely mimic Nature, reaping the bounty of her method. In the end, they&#39;re just trying to recreate what is already actually happening. It seems a silly extra step, doesn&#39;t it?&quot;]
 
 [[bruh, I can&#39;t with you right now]]
 
 
-[[&quot;But how are you actually interacting with Nature, though? It&#39;s this interaction that defines the term. Speaking of dominance, isn&#39;t claiming the wilderness itself as &#39;your garden&#39; simply obtruse plagiarization? You have done nothing, yet claimed everything; simply enjoying the milennia of work Nature has put in herself, and you sit back and state your part in it all: The Observer. I will not have it. Gardening is the act of tending, there is no separation.&quot;]]</tw-passagedata><tw-passagedata pid="126" name="bruh, I can&#39;t with you right now" tags="" position="4100,1500" size="100,100">(text-color: #1B4F72)[&quot;That&#39;s fine&quot;] he shrugs, (text-color: #1B4F72)[&quot;I&#39;m gonna go bathe in a stream&quot;]. 
+[[&quot;But how are you actually interacting with Nature, though? It&#39;s this interaction that defines the term. Speaking of dominance, isn&#39;t claiming the wilderness itself as &#39;your garden&#39; simply obtuse plagiarization? You have done nothing, yet claimed everything; simply enjoying the milennia of work Nature has put in herself, and you sit back and state your part in it all: The Observer. I will not have it. Gardening is the act of tending, there is no separation.&quot;]]</tw-passagedata><tw-passagedata pid="126" name="bruh, I can&#39;t with you right now" tags="" position="4225,1500" size="100,100">(text-color: #1B4F72)[&quot;That&#39;s fine&quot;] he shrugs, (text-color: #1B4F72)[&quot;I&#39;m gonna go bathe in a stream&quot;]. 
 
-And, like a greek god, he goes and bathes in a stream. </tw-passagedata><tw-passagedata pid="127" name="&quot;But how are you actually interacting with Nature, though? It&#39;s this interaction that defines the term. Speaking of dominance, isn&#39;t claiming the wilderness itself as &#39;your garden&#39; simply obtruse plagiarization? You have done nothing, yet claimed everything; simply enjoying the milennia of work Nature has put in herself, and you sit back and state your part in it all: The Observer. I will not have it. Gardening is the act of tending, there is no separation.&quot;" tags="" position="4375,1500" size="100,100">(text-color: #1B4F72)[&quot;Hm, I&#39;ve never thought about it that way&quot;] he says. (text-color: #1B4F72)[&quot;And also, I&#39;m kind of getting sick of all this heady talk. Shall we go and bathe in a stream?&quot;]
+And, like a greek god, he goes and bathes in a stream. 
+
+(display: &quot;invite to show&quot;)</tw-passagedata><tw-passagedata pid="127" name="&quot;That&#39;s a very poetic way of looking at things&quot;" tags="" position="4650,1175" size="100,100">(text-color: #1B4F72)[&quot;Thank you&quot;] he beams, (text-color: #1B4F72)[&quot;it comes from observation. Now, would you like to go bathe in a stream?&quot;]
+
+[[sure, I&#39;d love to bathe in a stream]]
+
+[[no, actually, I&#39;ll just wait until you&#39;re done]]</tw-passagedata><tw-passagedata pid="128" name="that, unlike your rediculous definition of gardening, I can get down with" tags="" position="4425,1700" size="100,100">(display: &quot;sure, I&#39;d love to bathe in a stream&quot;)</tw-passagedata><tw-passagedata pid="129" name="no, actually, I&#39;ll just wait until you&#39;re done" tags="" position="4625,1650" size="100,100">He shrugs, and, like a greek god, goes and bathes in a stream. 
+
+(display: &quot;invite to show&quot;)</tw-passagedata><tw-passagedata pid="130" name="sure, I&#39;d love to bathe in a stream" tags="" position="4800,1325" size="100,100">You both, like greek gods, go and bathe in a stream. It&#39;s incredibly refreshing. 
+
+(display: &quot;invite to show&quot;)</tw-passagedata><tw-passagedata pid="131" name="&quot;So, what do you wanna do now?&quot;" tags="" position="4150,1075" size="100,100">&quot;Maybe we can go bathe in a stream. I think I need to bathe in a stream.&quot; he offers. 
+
+[[sure, I&#39;d love to bathe in a stream]]
+
+[[no, actually, I&#39;ll just wait until you&#39;re done]]</tw-passagedata><tw-passagedata pid="132" name="&quot;But how are you actually interacting with Nature, though? It&#39;s this interaction that defines the term. Speaking of dominance, isn&#39;t claiming the wilderness itself as &#39;your garden&#39; simply obtuse plagiarization? You have done nothing, yet claimed everything; simply enjoying the milennia of work Nature has put in herself, and you sit back and state your part in it all: The Observer. I will not have it. Gardening is the act of tending, there is no separation.&quot;" tags="" position="4425,1475" size="100,100">(text-color: #1B4F72)[&quot;Hm, I&#39;ve never thought about it that way&quot;] he says. (text-color: #1B4F72)[&quot;And also, I&#39;m kind of getting sick of all this heady talk. Shall we go and bathe in a stream?&quot;]
 
 [[that, unlike your rediculous definition of gardening, I can get down with]]
 
-[[no, actually, I&#39;ll just wait until you&#39;re done]]</tw-passagedata><tw-passagedata pid="128" name="&quot;That&#39;s a very poetic way of looking at things&quot;" tags="" position="4525,1175" size="100,100">(text-color: #1B4F72)[&quot;Thank you&quot;] he beams, (text-color: #1B4F72)[&quot;it comes from observation.&quot;]</tw-passagedata><tw-passagedata pid="129" name="that, unlike your rediculous definition of gardening, I can get down with" tags="" position="4325,1675" size="100,100"></tw-passagedata><tw-passagedata pid="130" name="no, actually, I&#39;ll just wait until you&#39;re done" tags="" position="4500,1650" size="100,100">He shrugs, and, like a greek god, goes and bathes in a stream. </tw-passagedata></tw-storydata>
+[[no, actually, I&#39;ll just wait until you&#39;re done]]</tw-passagedata><tw-passagedata pid="133" name="the show" tags="show" position="7225,100" size="100,100">&lt;!--It all accumulates here. Information gets revealed, instigated by the player or not. Maybe a dramatic scene on the stage, in front of the Mayor. The public humiliation of Gabrielle, and the subsequent defenestration of Griffin.--&gt;
+
+&lt;!--
+Avery: Mentioned dating but not meet Randy
+Andy: Met Randy, mentioned dating
+Gabrielle:
+Griffin: Met Randy... maybe not know dating??
+--&gt;
+&lt;div id=&quot;show&quot;&gt;
+&lt;h3&gt; (text-style:&quot;outline&quot;)[(text-color: orange)[THE DAY OF THE BIG SHOW, CASUALLY MENTIONED BUT SUPER IMPORTANT, HAS ARRIVED!]] &lt;/h3&gt;
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="134" name="invite to show" tags="" position="4425,1875" size="100,100">(text-color: #1B4F72)[&quot;So,&quot;] he says, still bathing in this luxurius stream. (text-color: #1B4F72)[&quot;Gabrielle told me she was pretty impressed with your playing back at practice. She was wondering if you wanted to play with us this upcoming show?&quot;]
+
+[[of course!]] 
+
+[[honestly this rediculous date has turned me off completely to you rediculous group of people]]</tw-passagedata><tw-passagedata pid="135" name="of course!" tags="" position="4300,2000" size="100,100">He beams and says (text-color: #1B4F72)[&quot;That&#39;s great! She&#39;ll be pleased.&quot;] He stops for a moment and considers, (text-color: #1B4F72)[&quot;she&#39;s probably at the mall right now picking out a perfect outfit. It&#39;s a special show, you should feel lucky, it&#39;s Griff and Gab&#39;s one year anniversary - and the Mayor&#39;s gonna be there too!&quot;] 
+
+[[enough about them, let&#39;s talk about us!]]
+
+[[dang, the internals of their relationship is really interesting to me]]
+
+[[wait, the mayor is gonna be there?]]</tw-passagedata><tw-passagedata pid="136" name="honestly this rediculous date has turned me off completely to you rediculous group of people" tags="" position="4625,1900" size="100,100">That&#39;s totally fine, my guy. 
+
+You extricate yourself from The Easily Amused, and live a long, happy, drama-free life. 
+
+&#39;&#39;You win in your own quiet, boring way!&#39;&#39;</tw-passagedata><tw-passagedata pid="137" name="enough about them, let&#39;s talk about us!" tags="" position="4125,2175" size="100,100">Avery flushes a little.
+
+[[cat got your tounge?]]
+
+</tw-passagedata><tw-passagedata pid="138" name="dang, the internals of their relationship is really interesting to me" tags="" position="4600,2150" size="100,100">(text-color: #1B4F72)[&quot;I&#39;m happy for Gabrielle, she&#39;s comfortable around Griffin in a way I&#39;ve never seen before. It&#39;s nice, you know?&quot;]
+
+[[Yeah, it is nice]]
+
+[[wait wasn&#39;t that motherfucker hitting on me?]]</tw-passagedata><tw-passagedata pid="139" name="Yeah, it is nice" tags="" position="4700,2375" size="100,100">(text-color: #1B4F72)[&quot;Yeah, it is.&quot;] he says with satisfaction. (text-color: #1B4F72)[&quot;Well, anyways... uuuhhh, I don&#39;t really know. I figured I&#39;d woo you by working out and that&#39;s all I really had planned for today.&quot;]
+
+[[I was definitely woo&#39;d]]
+
+[[this is getting awkward, please just cut to the next scene]]</tw-passagedata><tw-passagedata pid="140" name="wait wasn&#39;t that motherfucker hitting on me?" tags="" position="4475,2375" size="100,100">Yes, yes he was. Fishy, huh? Maybe you&#39;ll find more about it at [[the show]]...</tw-passagedata><tw-passagedata pid="141" name="wait, the mayor is gonna be there?" tags="" position="4300,2450" size="100,100">Nodding, he adds (text-color: #1B4F72)[&quot;Yeah, it&#39;s a big event. The Mayor used to be a huge scene kid, so still likes to come and support local gigs. I think they&#39;re going to present the best band with the key to the city? It&#39;ll be a riot.&quot;]</tw-passagedata><tw-passagedata pid="142" name="cat got your tounge?" tags="" position="4125,2375" size="100,100"></tw-passagedata><tw-passagedata pid="143" name="I was definitely woo&#39;d" tags="" position="4700,2550" size="100,100">Avery flexes with satisfaction and says (text-color: #1B4F72)[&quot;That&#39;s great! I can&#39;t wait to play with you at [[the show]]!&quot;]</tw-passagedata><tw-passagedata pid="144" name="this is getting awkward, please just cut to the next scene" tags="" position="4850,2525" size="100,100">(display: &quot;the show&quot;)</tw-passagedata><tw-passagedata pid="145" name="shows a different form." tags="" position="5300,1025" size="100,100">&lt;!--A personal taylor for kpop street fashion??--&gt;
+
+After a couple of blinks, you can orient yourself. Darkness resumes and you realize the sudden light had been a camera flash, and you are now in a quiet room full of warm colors. A lengthy man with a camera stares at you for a moment, then regards Gabrielle cooly. 
+
+</tw-passagedata><tw-passagedata pid="146" name="pong" tags="" position="2175,1775" size="100,100">    &lt;div class=&quot;paddle paddleLeft&quot;&gt;&lt;p class=&quot;score scoreLeft&quot;&gt;0&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;paddle paddleRight&quot;&gt;&lt;p class=&quot;score scoreRight&quot;&gt;0&lt;/p&gt;&lt;/div&gt;
+    &lt;img id=&quot;ball&quot; src=&quot;images/aaBall Small.png&quot;&gt;
+&lt;script&gt;
+
+document.addEventListener(&quot;mousemove&quot;, getMousePosition);
+let mousePosition = 0;
+let downPressed = false;
+let upPressed = false;
+let isStill = true;
+let ballSpeed = 4;
+let paddleSpeed = 4;
+let scoreLeftEl = document.querySelector(&quot;.scoreLeft&quot;);
+let scoreRightEl = document.querySelector(&quot;.scoreRight&quot;);
+let scoreLeft = Number(scoreLeftEl.innerHTML);
+let scoreRight = Number(scoreRightEl.innerHTML);
+
+function getMousePosition(event) {
+    mousePosition = event.clientY;
+}
+
+function onKeyDown(event) {
+    if (event.code === &quot;ArrowDown&quot;) {
+       downPressed = true;
+    }
+    if (event.code === &quot;ArrowUp&quot;) {
+        upPressed = true;
+    }
+}
+
+function onKeyUp(event) {
+    if (event.code === &quot;ArrowDown&quot;) {
+       downPressed = false;
+    }
+    if (event.code === &quot;ArrowUp&quot;) {
+        upPressed = false;
+    }
+}
+
+document.addEventListener(&quot;keydown&quot;, onKeyDown);
+document.addEventListener(&quot;keyup&quot;, onKeyUp);
+let movingDown = true;
+let movingUp = false;
+let moveLeft  = true;
+let moveRight = false;
+function game() {
+    let ballPos = moveBall();
+    let paddlePosition = movePaddle();
+    checkCollision(ballPos, paddlePosition);
+    setTimeout(game, 17);
+}
+game()
+
+function checkCollision(ballPos, paddlePosition) {
+    // distance bt rect top to top of screen and distance bt rect bottom to bottom of screen = whitespace/empty
+    // collision if it&#39;s not in that whitespace
+    let paddlePositionOne = paddlePosition[0];
+    let paddlePositionTwo = paddlePosition[1];
+    
+    let leftPaddle = paddlePositionOne.right;
+    let rightPaddle = paddlePositionTwo.left;
+    let leftBall = ballPos.left;
+    let rightBall = ballPos.right;
+    let whiteSpaceOne = (ballPos.bottom &lt; paddlePositionOne.top || ballPos.top &gt; paddlePositionOne.bottom)
+    let whiteSpaceTwo = ballPos.bottom &lt; paddlePositionTwo.top || ballPos.top &gt; paddlePositionTwo.bottom
+
+    // Check Player One
+    if (leftBall &lt;= leftPaddle) {
+        if (!whiteSpaceOne) {
+            moveLeft = false;
+            moveRight = true;
+        }
+    }
+
+    // Check Player Two
+    if (rightBall &gt;= rightPaddle) {
+        if (!whiteSpaceTwo) {
+            moveLeft = true;
+            moveRight = false;
+        }
+    }
+}
+
+function moveBall() {
+    let ball = document.getElementById(&quot;ball&quot;);
+    let ballPos = ball.getBoundingClientRect();
+    let topBall = ballPos.top;
+    let bottomBall = ballPos.bottom;
+    let leftBall = ballPos.left;
+    let rightBall = ballPos.right;
+    
+    // move down
+    if (movingDown) {
+        if (bottomBall &lt;= window.innerHeight) {
+            ball.style.top = `${topBall + ballSpeed}px`
+        }
+        else {
+            movingDown = false;
+            movingUp = true;
+        }
+    }
+    else if (movingUp) {
+        if (topBall &gt;= 0) {
+            ball.style.top = `${topBall - ballSpeed}px`
+        }
+        else {
+            movingUp = false;
+            movingDown = true;
+        }
+    }
+    if (moveLeft) {
+        if (leftBall &gt;= 0) {
+            ball.style.left = `${leftBall - ballSpeed}px`
+        }
+        // Hit Left wall
+        else {
+            moveLeft = false;
+            moveRight = true;
+            scoreRight++;
+            scoreRightEl.innerHTML = scoreRight;
+        }
+    }
+    else if (moveRight) {
+        if (rightBall &lt;= window.innerWidth) {
+            ball.style.left = `${leftBall + ballSpeed}px`
+        }
+        // Hit right wall
+        else {
+            moveRight = false;
+            moveLeft = true;
+            scoreLeft++;
+            scoreLeftEl.innerHTML = scoreLeft;  
+        }
+    }
+    return ballPos;
+}
+function movePaddleLeft(playerOne) {
+    // moves by mouse
+    let paddlePositionOne = playerOne.getBoundingClientRect();
+    let topOne = paddlePositionOne.top;
+    let bottomOne = paddlePositionOne.bottom;
+    let heightOne = paddlePositionOne.height;
+    let centerPlayerOne = getCenter(topOne, heightOne);
+    // moving down
+    if (centerPlayerOne &lt; mousePosition &amp;&amp; bottomOne &lt;= (window.innerHeight - 20)) {
+        playerOne.style.top = `${topOne + paddleSpeed}px`;
+    }
+    // moving up
+    else if (centerPlayerOne &gt; mousePosition  &amp;&amp; topOne &gt;= 20) {
+        playerOne.style.top = `${topOne - paddleSpeed}px`;
+    }
+    return paddlePositionOne;
+}
+function movePaddleRight(playerTwo) {
+    // Moves by arrows
+    let paddlePositionTwo = playerTwo.getBoundingClientRect();
+    let topTwo = paddlePositionTwo.top;
+    let bottomTwo = paddlePositionTwo.bottom;
+    if (downPressed &amp;&amp; bottomTwo &lt;= (window.innerHeight - 20)) {
+        playerTwo.style.top = `${topTwo + paddleSpeed}px`;
+    }
+    if (upPressed &amp;&amp; topTwo &gt;= 20) {
+        playerTwo.style.top = `${topTwo - paddleSpeed}px`;
+    }
+    return paddlePositionTwo;
+}
+function movePaddle() {
+    let playerOne = document.querySelector(&quot;.paddleLeft&quot;);
+    let playerTwo = document.querySelector(&quot;.paddleRight&quot;);
+    let paddlePositionOne = movePaddleLeft(playerOne);
+    let paddlePositionTwo = movePaddleRight(playerTwo);
+    return [paddlePositionOne, paddlePositionTwo];
+}
+
+function getCenter (top, height) {
+    let center = top + (height / 2);
+    return center;
+}
+&lt;/script&gt;
+
+
+All that&#39;s left to do is [[enjoy the baths themselves]]  </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
